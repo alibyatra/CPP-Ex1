@@ -53,7 +53,7 @@ string find(string text, string word)
         i++;
     }
 
-    while ((text.length() > i) && (word.length() > j) && (iSimilari], word[j])))
+    while ((text.length() > i) && (word.length() > j) && (iSimilar(text[i], word[j]))
     {
         str += text[i];
         j++;
