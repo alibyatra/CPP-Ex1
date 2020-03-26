@@ -47,19 +47,16 @@ string find(string text, string word)
     size_t i = 0;
     for (i = 0; i < text.length(); i++)
     {
-    
     while (text[i] == ' ')
     {
         i++;
     }
-
-    while ((text.length() > i) && (word.length() > j) && (iSimilar(text[i], word[j]))
+    while ((text.length() > i) && (word.length() > j) && (iSimilar(text[i], word[j])))
     {
         str += text[i];
         j++;
         i++;
     }
-
     if (str.length() == word.length())
     {
         if (!(isalpha(text[i])))
