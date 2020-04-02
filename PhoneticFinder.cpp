@@ -37,10 +37,10 @@ int iSimilar(char x, char y)
 }
 string find(string text, string word)
 {
-    if (word.length() == 0 || word == " ")
-        {
-            throw runtime_error("Empty word");
-        }
+    if (text == " " || word == " " || text.empty() || word.empty()) 
+    { 
+        throw runtime_error("Eror: Empty word or text!");
+    }
 
     string str = "";
     int j = 0;
@@ -59,16 +59,16 @@ string find(string text, string word)
     }
     if (str.length() == word.length())
     {
-        if (!(isalpha(text[i])))
+        if ((text[i]<65) || (text[i]>90) || (text[i]<97) || (text[i]>122))
         return str;
     }
 
     str = "";
     j = 0;
-}
+    }
 if ((word.length() != str.length()))
     {        
-    throw runtime_error("Sorry, The word " + word + " is not exist in the text.");
+    throw runtime_error("Sorry, The word " + word + " is not exist in the text.");  
     }
 return str;
 }
